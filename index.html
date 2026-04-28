@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/loader.css" />
   <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/dock.css" />
 </head>
 <body>
 
@@ -33,14 +34,30 @@
       </div>
     </header>
 
+    <!-- Gesture notification -->
+    <div id="gesture-toast"></div>
+
     <div id="container">
       <video id="video" autoplay playsinline muted></video>
+      <canvas id="paint-canvas"></canvas>
       <canvas id="canvas"></canvas>
       <div class="scanlines"></div>
       <div class="bracket tl"></div>
       <div class="bracket tr"></div>
       <div class="bracket bl"></div>
       <div class="bracket br"></div>
+    </div>
+
+    <!-- Floating control dock -->
+    <div id="dock">
+      <button class="dock-btn" id="btn-theme" title="Cycle theme">◈</button>
+      <span id="theme-label">Cyberpunk</span>
+      <div class="dock-divider"></div>
+      <button class="dock-btn" id="btn-trails" title="Motion trails">〰</button>
+      <button class="dock-btn" id="btn-paint"  title="Paint mode">✦</button>
+      <button class="dock-btn" id="btn-audio"  title="Theremin">♪</button>
+      <div class="dock-divider"></div>
+      <button class="dock-btn dock-btn--danger" id="btn-clear" title="Clear paint">✕</button>
     </div>
 
     <footer id="footer">
