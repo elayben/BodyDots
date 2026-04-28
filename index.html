@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BodyDots</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="spinner-ring"></div>
+      <div class="loader-logo">BD</div>
+    </div>
+    <p class="loader-title">BODYDOTS</p>
+    <p id="loader-status">Initializing…</p>
+  </div>
+
+  <!-- Main app -->
+  <div id="app" class="hidden">
+
+    <header id="hud">
+      <span class="hud-logo">BODY<span class="accent">DOTS</span></span>
+      <div class="hud-right">
+        <span id="fps-counter">-- fps</span>
+        <span id="tracking-badge" class="badge badge--idle">NO BODY</span>
+      </div>
+    </header>
+
+    <div id="container">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <div class="scanlines"></div>
+      <div class="bracket tl"></div>
+      <div class="bracket tr"></div>
+      <div class="bracket bl"></div>
+      <div class="bracket br"></div>
+    </div>
+
+    <footer id="footer">
+      <span id="landmark-count">0 landmarks</span>
+      <span class="footer-hint">Move freely — dots track your body</span>
+    </footer>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
